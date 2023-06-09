@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin Dashboard</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="../assets/vendors/jvectormap/jquery-jvectormap.css">
+  <!-- End plugin css for this page -->
+  <!-- Layout styles -->
+  <link rel="stylesheet" href="../assets/css/demo/style.css">
+  <!-- End layout styles -->
+  <link rel="shortcut icon" href="../assets/images/favicon.png" />
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src=" https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src=" https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+
+  <script>
+    $(document).ready(function () {
+      $('#userTable').DataTable();
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('#customerTable').DataTable();
+    });
+  </script>
+
+</head>
+
+<body>
+  <script src="../assets/js/preloader.js"></script>
+  <div class="body-wrapper">
+    <!-- partial:partials/_sidebar.html -->
+    <%- include('../../include/_sidebar.ejs') %>
+      <!-- partial -->
+      <div class="main-wrapper mdc-drawer-app-content">
+        <!-- partial:partials/_navbar.html -->
+
+        <!-- partial -->
+
+        <div class="page-wrapper mdc-toolbar-fixed-adjust">
+          <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+              <form action="/filter" method="post">
+                <!-- <label for="filterData">Filter</label> -->
+                <select name="filterData" onchange="this.form.submit()">
+                  <option>Filteration Data</option>
+                  <option value="all">All</option>
+                  <option value="customer">Customer</option>
+                  <option value="user">User</option>
+                </select>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="page-wrapper mdc-toolbar-fixed-adjust">
+          <main class="content-wrapper">
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__inner">
+                    <% if(role=="user" || role=="all" ){ %>
+                      <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
+                        <div class="mdc-card p-0">
+                          <h6 class="card-title card-padding pb-0">User Table</h6>
+                          <div class="table-responsive">
+                            <table class="table" id="userTable">
+                              <thead>
+                                <tr>
+                                  <th>Role</th>
+                                  <th>Name</th>
+                                  <th>Email</th>
+                                  <th>Phone-no</th>
+                                  <th>Date-of-Birth</th>
+                                  <th>Address</th>
+                                  <th>Edit</th>
+                                  <th>Delete</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <% users.forEach(user=> { %>
+                                  <tr>
+                                    <td>
+                                      <%= user.role%>
+                                    </td>
+                                    <td>
+                                      <%= user.name%>
+                                    </td>
+                                    <td>
+                                      <%= user.email%>
+                                    </td>
+                                    <td>
+                                      <%= user.phoneno%>
+                                    </td>
+                                    <td>
+                                      <%= user.dob%>
+                                    </td>
+                                    <td>
+                                      <%= user.address%>
+                                    </td>
+                                    <td><a href="/edit/<%=user._id%>" class="btn btn-sm btn-primary">Edit</td></a>
+                                    <td><a href="/user-delete/<%=user._id%>" class="btn btn-sm btn-danger"> Delete</td>
+                                    </a>
+                                  </tr>
+                                  <% }) %>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <% } %>
+
+                        <% if(role=="customer" || role=="all" ){ %>
+                          <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
+                            <div class="mdc-card p-0">
+                              <h6 class="card-title card-padding pb-0">Customer Table</h6>
+                              <div class="table-responsive">
+                                <table class="table table-striped" id="customerTable">
+                                  <thead>
+                                    <tr>
+                                      <!-- <th>Role</th> -->
+                                      <th>Name</th>
+                                      <th>Email</th>
+                                      <th>Phone-no</th>
+                                      <th>Date-of-Birth</th>
+                                      <th>Address</th>
+                                      <th>Edit</th>
+                                      <th>Delete</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+
+                                    <% customers.forEach(customer=> { %>
+                                      <tr>
+                                        <td>
+                                          <%= customer.name%>
+                                        </td>
+                                        <td>
+                                          <%= customer.email%>
+                                        </td>
+                                        <td>
+                                          <%= customer.phoneno%>
+                                        </td>
+                                        <td>
+                                          <%= customer.dob%>
+                                        </td>
+                                        <td>
+                                          <%= customer.address%>
+                                        </td>
+                                        <td><a href="/cus-edit/<%=customer._id%>" class="btn btn-sm btn-primary">Edit
+                                        </td></a>
+                                        <td><a href="/cus-delete/<%=customer._id%>" class="btn btn-sm btn-danger">
+                                            Delete</td>
+                                        </a>
+                                      </tr>
+                                      <% }) %>
+
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <% } %>
+              </div>
+            </div>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          </main>
+        </div>
+      </div>
+  </div>
+
+</body>
+
+</html>

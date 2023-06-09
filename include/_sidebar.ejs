@@ -1,0 +1,109 @@
+<aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
+  <div class="mdc-drawer__header">
+    <a href="/" class="brand-logo">
+      <!-- <img src="assets/images/image.jpeg" alt="logo"> -->
+    </a>
+  </div>
+  <div class="mdc-drawer__content">
+    <div class="user-info">
+      <p class="name">Arman Ali</p>
+      <p class="email">arman.ali@technomark.io</p>
+    </div>
+    <div class="mdc-list-group">
+      <nav class="mdc-list mdc-drawer-menu">
+        <div class="mdc-list-item mdc-drawer-item">
+          <a class="mdc-drawer-link" href="/dashboard">
+            <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">home</i>
+            Dashboard
+          </a>
+        </div>
+        <div class="mdc-list-item mdc-drawer-item">
+          <a class="mdc-drawer-link" href="/index">
+            <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">home</i>
+            Home Page
+          </a>
+        </div>
+        <% if(role=="admin" ){ %>
+          <div class="mdc-list-item mdc-drawer-item">
+            <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="ui-sub-menu">
+              <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                aria-hidden="true">dashboard</i>
+              Services Features
+              <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+            </a>
+            <div class="mdc-expansion-panel" id="ui-sub-menu">
+              <nav class="mdc-list mdc-drawer-submenu">
+                <div class="mdc-list-item mdc-drawer-item">
+                  <a class="mdc-drawer-link" href="add-user">
+                    Add User
+                  </a>
+                </div>
+                <div class="mdc-list-item mdc-drawer-item">
+                  <a class="mdc-drawer-link" href="add-customer">
+                    Add Customer
+                  </a>
+                </div>
+                <div class="mdc-list-item mdc-drawer-item">
+                  <a class="mdc-drawer-link" href="add-service">
+                    Add Service
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <div class="mdc-list-item mdc-drawer-item">
+            <a class="mdc-drawer-link" href="basicTables">
+              <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">grid_on</i>
+              Tables
+            </a>
+          </div>
+
+          <% } %>
+
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="payment">
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                  aria-hidden="true">pie_chart_outlined</i>
+                payment
+              </a>
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel"
+                data-target="sample-page-submenu">
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pages</i>
+                Auth Pages
+                <i class="mdc-drawer-arrow material-icons">chevron_right</i>
+              </a>
+              <div class="mdc-expansion-panel" id="sample-page-submenu">
+                <nav class="mdc-list mdc-drawer-submenu">
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="login">
+                      Login
+                    </a>
+                  </div>
+                  <div class="mdc-list-item mdc-drawer-item">
+                    <a class="mdc-drawer-link" href="register">
+                      Register
+                    </a>
+                  </div>
+                </nav>
+              </div>
+            </div>
+            <div class="mdc-list-item mdc-drawer-item">
+              <a class="mdc-drawer-link" href="https://www.linkedin.com/in/arman-ali-8383081ab/" target="_blank">
+                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon"
+                  aria-hidden="true">description</i>
+                Profile Visit
+              </a>
+            </div>
+      </nav>
+    </div>
+    <div class="profile-actions">
+      <a href="javascript:;">Settings</a>
+      <span class="divider"></span>
+      <a href="logout">Logout</a>
+    </div>
+
+  </div>
+</aside>
