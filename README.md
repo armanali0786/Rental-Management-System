@@ -28,8 +28,8 @@ Payment Integration: The Rental Management System incorporates a secure and seam
 
  ![payment-page](https://github.com/armanali0786/Rental-Management-System/assets/76746226/2b365416-0985-4d75-bf73-8326218a8ccf)
  
- ![payment-success](https://github.com/armanali0786/Rental-Management-System/assets/76746226/a7673de8-edf4-4f74-bb9e-c21a9f64b92e)
  
+ ![payment-success](https://github.com/armanali0786/Rental-Management-System/assets/76746226/a7673de8-edf4-4f74-bb9e-c21a9f64b92e)
  
 
 ![payment-dashboard](https://github.com/armanali0786/Rental-Management-System/assets/76746226/ccac2f1b-5aa1-4a3d-8562-eb8a559450d3)
@@ -48,11 +48,18 @@ Payment Integration: The Rental Management System incorporates a secure and seam
     ![messege](https://github.com/armanali0786/Rental-Management-System/assets/76746226/1072482c-83b3-4125-b02c-4d4b519d015d)
 
     
-![notification](https://github.com/armanali0786/Rental-Management-System/assets/76746226/c77ee6f6-a62b-457f-990a-2966cea3d22e)
+![notification](https://github.com/armanali0786/Rental-Management-System/assets/76746226/c77ee6f6-a62b-457f-990a-2966cea3d22e)!
+
+[messege](https://github.com/armanali0786/Rental-Management-System/assets/76746226/9765208c-24f5-4ad1-8bac-bc03d65206c9)
+
+
 
     Admin Dashboard: The system includes an intuitive admin dashboard that allows administrators to manage user accounts, property listings, payments, and other crucial aspects. Admins can also generate reports, analyze data, and resolve disputes if any arise.
     
-    ![Dashboard](https://github.com/armanali0786/Rental-Management-System/assets/76746226/3fe9999a-c547-488e-9813-dbbfd7ddece8)
+    
+  
+ ![Dashboard](https://github.com/armanali0786/Rental-Management-System/assets/76746226/3fe9999a-c547-488e-9813-dbbfd7ddece8)
+![Tables](https://github.com/armanali0786/Rental-Management-System/assets/76746226/09c5a4b9-378a-4f0d-884e-d72f3ad36501)
 
     
 
