@@ -2,16 +2,17 @@
 
 The Rental Management System is an efficient and user-friendly web application that aims to simplify the process of renting rooms or houses. It provides a platform for users to search and book rental accommodations in their desired location, while also offering administrative tools for service providers to add their offerings and manage payments.
 
+![home page ](https://github.com/armanali0786/Rental-Management-System/assets/76746226/f39a190d-bd88-47b0-9c8d-4aff65a6b611)
 
-
-![dashboard](https://github.com/armanali0786/Rental-Management-System/assets/76746226/00420d82-8fc5-4590-af9d-2113eaf1424b)
 
 Key Features:
 
 User Registration and Authentication: The system allows users to create accounts and log in securely, providing them with a personalized experience. Users can manage their profiles, including their contact information, preferences, and rental history.
 
+![Registration-form](https://github.com/armanali0786/Rental-Management-System/assets/76746226/62e516ef-223d-4e03-b7a1-97862d3d7a72)
 
-![Registration-form](https://github.com/armanali0786/Rental-Management-System/assets/76746226/340f48ba-ce61-4b92-9cba-9c43f8a66b50)
+
+
 
 Property Search and Booking: The system enables users to search for available rental properties based on their preferred location, budget, and other relevant criteria. They can view detailed property listings that include descriptions, photos, amenities, and reviews from other users. Once they find a suitable option, users can initiate the booking process and make reservations for their desired duration.
 
