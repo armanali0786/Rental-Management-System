@@ -35,10 +35,6 @@ Key Features:
 
 
 
-# Rental-Management-System
-
-The Rental Management System is an efficient and user-friendly web application that aims to simplify the process of renting rooms or houses. It provides a platform for users to search and book rental accommodations in their desired location, while also offering administrative tools for service providers to add their offerings and manage payments.
-
 ![home page ](https://github.com/armanali0786/Rental-Management-System/assets/76746226/f39a190d-bd88-47b0-9c8d-4aff65a6b611)
 
 
